@@ -1,5 +1,5 @@
 # geant-4-docker
-Simplified Geant4 usage with a docker container derived from a Ubuntu 16.04 ROOT container.
+Simplified Geant4 usage with a docker container derived from a [Ubuntu 16.04 ROOT](https://hub.docker.com/r/rootproject/root-ubuntu16/) container.
 
 Docker can be installed following the instructions on the [Docker homepage](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
