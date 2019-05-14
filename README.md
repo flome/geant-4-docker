@@ -1,5 +1,5 @@
 # geant-4-docker
-Simplified Geant4 usage with a docker container derived from a [Ubuntu 16.04 ROOT](https://hub.docker.com/r/rootproject/root-ubuntu16/) container.
+Simplified [Geant4](https://geant4.web.cern.ch/) usage with a [Docker container](https://cloud.docker.com/repository/docker/smflment/geant-4-docker/general) derived from a [Ubuntu 16.04 ROOT](https://hub.docker.com/r/rootproject/root-ubuntu16/) container.
 
 Docker can be installed following the instructions on the [Docker homepage](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
