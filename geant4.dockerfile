@@ -3,7 +3,7 @@ USER root
 
 RUN apt-get update -y -qq ;\
     apt-get install --no-install-recommends -qq -y \
-    wget cmake make g++ ninja libxerces-c-dev qt5-default \
+    wget cmake make g++ libxerces-c-dev qt5-default \
     libqt5opengl5-dev software-properties-common &&\    
     add-apt-repository ppa:ubuntu-x-swat/updates && \
     apt-get update && apt-get -y dist-upgrade &&\
@@ -25,8 +25,8 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release \
           -DGEANT4_USE_OPENGL_X11=ON \
           -DGEANT4_USE_QT=ON \
           ../geant4 ;\ 
-    ninja -j4 ;\
-    ninja install ;\
+    make -j4 ;\
+    make install ;\
     cd ..;\
     rm -rf geant4 geant4-build
 
