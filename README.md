@@ -21,6 +21,7 @@ To use the GUI, you need to pass X11 information. From Linux you can run the con
 docker run -it --rm --ipc=host --net=host \
            -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
            -v "$HOME/.Xauthority:/root/.Xauthority:rw" \
+           --name geant4_container \
            geant4 bash
 ```
 ### Run example
@@ -48,3 +49,20 @@ The bare image comes without examples and datasets. You will need to download th
 - [G4ABLA.3.1](https://cern.ch/geant4-data/datasets/G4ABLA.3.1.tar.gz)
 - [G4INCL.1.0](https://cern.ch/geant4-data/datasets/G4INCL.1.0.tar.gz)
 - [G4ENSDFSTATE.2.2](https://cern.ch/geant4-data/datasets/G4ENSDFSTATE.2.2.tar.gz)
+
+Download shortcut:
+```
+wget https://cern.ch/geant4-data/datasets/G4NDL.4.5.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4EMLOW.7.7.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4PhotonEvaporation.5.3.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4RadioactiveDecay.5.3.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4PARTICLEXS.1.1.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4PII.1.3.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4RealSurface.2.1.1.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4SAIDDATA.2.0.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4ABLA.3.1.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4INCL.1.0.tar.gz \
+     https://cern.ch/geant4-data/datasets/G4ENSDFSTATE.2.2.tar.gz
+```
+
+           
