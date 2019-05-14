@@ -5,5 +5,8 @@ Docker can be installed following the instructions on the [Docker homepage](http
 
 To use the GUI, you need to pass X11 information. From Linux you can run the container using
 ```
-docker run -it --ipc=host --net=host --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v "$HOME/.Xauthority:/root/.Xauthority:rw" geant4 bash
+docker run -it --rm --ipc=host --net=host \
+           -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+           -v "$HOME/.Xauthority:/root/.Xauthority:rw" \
+           geant4 bash
 ```
