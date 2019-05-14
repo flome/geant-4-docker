@@ -18,7 +18,7 @@ RUN tar -xzf "geant4.10.05.p01.tar.gz" ;\
 WORKDIR /tmp/geant4-build
 RUN cmake -DCMAKE_BUILD_TYPE=Release \
           -DCMAKE_INSTALL_PREFIX=/usr/local/geant4 \
-          -DGEANT4_INSTALL_DATA=OFF \
+          -DGEANT4_INSTALL_DATA=ON \
           -DGEANT4_USE_SYSTEM_CLHEP=OFF \
           -DGEANT4_USE_SYSTEM_EXPAT=OFF \
           -DGEANT4_USE_GDML=ON \
