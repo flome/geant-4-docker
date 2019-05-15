@@ -1,12 +1,11 @@
-FROM rootproject/root-ubuntu16
+FROM smflment/root-docker:ubuntu-18-04
 USER root
 
 RUN apt-get update -y -qq ;\
     apt-get install --no-install-recommends -qq -y \
-    wget cmake make g++ libxerces-c-dev qt5-default \
-    libqt5opengl5-dev software-properties-common &&\    
-    add-apt-repository ppa:ubuntu-x-swat/updates && \
-    apt-get update && apt-get -y dist-upgrade &&\
+    wget cmake make g++ libxerces-c-dev qt4-dev-tools \
+    freeglut3-dev libmotif-dev tk-dev libxpm-dev \
+    libxmu-dev libxi-dev &&\
     apt-get autoremove -y
 
 WORKDIR /tmp
@@ -33,7 +32,7 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release \
 RUN apt-get install -y 
 
 WORKDIR /tmp
-COPY ./geant4.entrypoint.sh /tmp
-RUN chmod +x /tmp/geant4.entrypoint.sh
+COPY ./geant4.entrypoint.sh /
+RUN chmod +x /geant4.entrypoint.sh
 
-ENTRYPOINT [ "/tmp/geant4.entrypoint.sh" ]
+ENTRYPOINT [ "/geant4.entrypoint.sh" ]
