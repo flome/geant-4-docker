@@ -4,9 +4,10 @@ USER root
 RUN apt-get update -y -qq ;\
     apt-get install --no-install-recommends -qq -y \
     wget cmake make g++ libxerces-c-dev qt4-dev-tools \
-    freeglut3-dev libmotif-dev tk-dev libxpm-dev \
-    libxmu-dev libxi-dev &&\
+    freeglut3-dev libmotif-dev libxpm-dev libxmu-dev libxi-dev &&\
     apt-get autoremove -y
+
+# RUN apt-get install -y tk-dev 
 
 WORKDIR /tmp
 COPY geant4.10.05.p01.tar.gz .
@@ -23,13 +24,13 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release \
           -DGEANT4_USE_GDML=ON \
           -DGEANT4_USE_OPENGL_X11=ON \
           -DGEANT4_USE_QT=ON \
+          -DGEANT4_USE_XM=ON \
           ../geant4 ;\ 
     make -j4 ;\
     make install ;\
     cd ..;\
     rm -rf geant4 geant4-build
 
-RUN apt-get install -y 
 
 WORKDIR /tmp
 COPY ./geant4.entrypoint.sh /
