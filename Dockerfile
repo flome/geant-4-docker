@@ -1,4 +1,4 @@
-FROM smflment/root-docker:16-06
+FROM smflment/root-docker:6-16
 USER root
 
 RUN apt-get update -y -qq ;\
