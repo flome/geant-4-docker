@@ -1,5 +1,5 @@
 # geant-4-docker
-Simplified [Geant4](https://geant4.web.cern.ch/) usage with a [Docker container](https://cloud.docker.com/repository/docker/smflment/geant-4-docker/general) derived from a [Ubuntu 18.04 ROOT](https://cloud.docker.com/repository/docker/smflment/root-docker) container.
+Simplified [Geant4](https://geant4.web.cern.ch/) usage with a Docker container derived from a [Ubuntu 18.04 ROOT](https://cloud.docker.com/repository/docker/smflment/root-docker) container. The [image is hosted on DockerHub](https://cloud.docker.com/repository/docker/smflment/geant4)
 
 Docker can be installed following the instructions on the [Docker homepage](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
