@@ -1,7 +1,7 @@
 # geant-4-docker
 Simplified [Geant4](https://geant4.web.cern.ch/) usage with a Docker container derived from a [Ubuntu 18.04 ROOT](https://cloud.docker.com/repository/docker/smflment/root-docker) container. The [image is hosted on DockerHub](https://cloud.docker.com/repository/docker/smflment/geant4)
 
-Docker can be installed following the instructions on the [Docker homepage](https://docs.docker.com/install/linux/docker-ce/ubuntu/). The Docker image can also be used very well to build a Singularity container from it. Tested on CentOS7 with Singularity 3.2 successfully with graphics support wihtout the need for passing further flags.
+Docker can be installed following the instructions on the [Docker homepage](https://docs.docker.com/install/linux/docker-ce/ubuntu/). The Docker image can also be used very well to build a [Singularity container](https://www.sylabs.io/singularity/) from it. Tested on [CentOS7](https://www.centos.org/) with [Singularity 3.2](https://github.com/sylabs/singularity) successfully with graphics support wihtout the need for passing further flags.
 
 ## Usage
 
