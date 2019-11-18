@@ -3,11 +3,17 @@ USER root
 
 RUN apt-get update -y -qq ;\
     apt-get install --no-install-recommends -qq -y \
-    wget cmake make g++ libxerces-c-dev qt4-dev-tools \
-    freeglut3-dev libmotif-dev libxpm-dev libxmu-dev libxi-dev &&\
-    apt-get autoremove -y
-
-# RUN apt-get install -y tk-dev 
+    wget \
+    cmake \
+    make \
+    g++ \
+    libxerces-c-dev \
+    qtbase5-dev \
+    libxmu-dev \
+    libxi-dev \
+    libmotif-dev \
+    packagekit-gtk3-module && \
+    apt-get autoremove -y 
 
 WORKDIR /tmp
 
@@ -26,6 +32,7 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release \
           -DGEANT4_USE_OPENGL_X11=ON \
           -DGEANT4_USE_QT=ON \
           -DGEANT4_USE_XM=ON \
+          -DGEANT4_BUILD_MULTITHREADED=ON \
           ../geant4 ;\ 
     make -j4 ;\
     make install ;\

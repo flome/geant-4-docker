@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: smflment/geant4:10.5.1
+From: smflment/geant4:mt
 
 %environment
 
