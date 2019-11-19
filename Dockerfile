@@ -3,17 +3,20 @@ USER root
 
 RUN apt-get update -y -qq ;\
     apt-get install --no-install-recommends -qq -y \
-    wget \
-    cmake \
+    # basics not installed by root already
     make \
-    g++ \
+    # xml parser for geant4
     libxerces-c-dev \
-    qtbase5-dev \
+    # visualizer libraries
+    qt4-dev-tools \
+    libgl1-mesa-dev \
     libxmu-dev \
     libxi-dev \
-    libmotif-dev \
-    packagekit-gtk3-module && \
+    libmotif-dev &&\
+    # clean up image
     apt-get autoremove -y 
+
+RUN dpkg-reconfigure locales;
 
 WORKDIR /tmp
 
@@ -41,6 +44,8 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release \
 
 
 WORKDIR /tmp
+RUN mkdir geant4run
+
 COPY ./geant4.entrypoint.sh /
 RUN chmod +x /geant4.entrypoint.sh
 

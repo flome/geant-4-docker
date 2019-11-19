@@ -29,4 +29,6 @@ From: smflment/geant4:mt
     export MANPATH=/usr/local/root-6.16.00/man:
     export G4LEDATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4EMLOW7.7
 
-
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export XDG_RUNTIME_DIR=/tmp/geant4run 
