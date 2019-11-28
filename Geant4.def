@@ -1,6 +1,8 @@
 Bootstrap: docker
 From: smflment/geant4:mt
 
+
+
 %environment
 
     export LD_LIBRARY_PATH=/usr/local/root-6.16.00/lib:/usr/local/geant4/lib:/.singularity.d/libs:/usr/lib/x86_64-linux-gnu
@@ -32,3 +34,6 @@ From: smflment/geant4:mt
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
     export XDG_RUNTIME_DIR=/tmp/geant4run 
+
+    export CC=/usr/bin/cc
+    export CXX=/usr/bin/g++
