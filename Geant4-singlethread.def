@@ -1,0 +1,39 @@
+Bootstrap: docker
+From: smflment/geant4:vis
+
+
+
+%environment
+
+    export LD_LIBRARY_PATH=/usr/local/root-6.16.00/lib:/usr/local/geant4/lib:/.singularity.d/libs:/usr/lib/x86_64-linux-gnu
+    export XAUTHORITY=/root/.Xauthority
+    export PATH=/usr/local/root-6.16.00/bin:/usr/local/geant4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    export G4INCLDATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4INCL1.0
+    export G4INSTALL=/usr/local/geant4
+    export G4LEVELGAMMADATA=/usr/local/geant4/share/Geant4-10.5.1/data/PhotonEvaporation5.3
+    export DYLD_LIBRARY_PATH=/usr/local/root-6.16.00/lib
+    export G4RADIOACTIVEDATA=/usr/local/geant4/share/Geant4-10.5.1/data/RadioactiveDecay5.3
+    export G4PIIDATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4PII1.3
+    export G4SAIDXSDATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4SAIDDATA2.0
+    export ROOTSYS=/usr/local/root-6.16.00
+    export G4ABLADATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4ABLA3.1
+    export G4REALSURFACEDATA=/usr/local/geant4/share/Geant4-10.5.1/data/RealSurface2.1.1
+    export CMAKE_PREFIX_PATH=/usr/local/root-6.16.00
+    export G4NEUTRONHPDATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4NDL4.5
+    export JUPYTER_PATH=/usr/local/root-6.16.00/etc/notebook
+    export G4PARTICLEXSDATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4PARTICLEXS1.1
+    export SHLIB_PATH=/usr/local/root-6.16.00/lib
+    export G4COMP=/usr/local/geant4/lib/Geant4-10.5.1
+    export LIBPATH=/usr/local/root-6.16.00/lib
+    export G4EXAMPLES=/usr/local/geant4/share/Geant4-10.5.1/examples
+    export G4ENSDFSTATEDATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4ENSDFSTATE2.2
+    export PYTHONPATH=/usr/local/root-6.16.00/lib
+    export MANPATH=/usr/local/root-6.16.00/man:
+    export G4LEDATA=/usr/local/geant4/share/Geant4-10.5.1/data/G4EMLOW7.7
+
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export XDG_RUNTIME_DIR=/tmp/geant4run
+
+    export CC=/usr/bin/cc
+    export CXX=/usr/bin/g++
