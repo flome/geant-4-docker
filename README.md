@@ -7,7 +7,7 @@ Docker can be installed following the instructions on the [Docker homepage](http
 
 To run the container, simply call
 ```
-docker run -it --rm --name geant4_container smflment/geant-4-docker:10.5.1 bash
+docker run -it --rm --name geant4_container smflment/geant4:10.5.1 bash
 ```
 Options:
 - ``` -it ```: Keep bash open after invoking
@@ -22,7 +22,7 @@ docker run -it --rm --ipc=host --net=host \
            -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
            -v "$HOME/.Xauthority:/root/.Xauthority:rw" \
            --name geant4_container \
-           smflment/geant-4-docker:10.5.1 bash
+           smflment/geant4:10.5.1 bash
 ```
 ### Run example
 
